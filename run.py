@@ -118,7 +118,7 @@ def input_checker(word_to_guess):
     set_of_word = set(word_to_guess)
     length_of_set = len(set_of_word)
     while i < 9:
-        letter_input = input("Please enter a letter: ")
+        letter_input = input("Please enter a letter: \n")
         if not letter_input.isalpha() or len(letter_input) > 1:
             print("Invalid! Please try again:")
         elif letter_input in guess_data_lists["correct"]:

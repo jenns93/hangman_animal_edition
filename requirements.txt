@@ -1,1 +1,3 @@
-# requirements go here
+cprint==1.2.2
+pyfiglet==0.8.post1
+termcolor==1.1.0
