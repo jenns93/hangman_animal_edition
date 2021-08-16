@@ -137,4 +137,11 @@ def input_checker(word_to_guess):
                 print(f"!! GAME OVER !!\nthe word was\n{word_to_guess}")
 
 
-title_text()
+def main():
+    """
+    Run program functions
+    """
+    title_text()
+    
+
+main()
