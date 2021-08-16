@@ -148,7 +148,7 @@ def input_checker(word_to_guess):
                 print(f"unlucky the word does not contain {letter_input}\n")
                 if letter_input not in guess_data_lists["wrong"]:
                     guess_data_lists["wrong"].append(letter_input)
-                    i = 1
+                    i += 1
                     print(hangman[i])
                 elif letter_input in guess_data_lists["wrong"]:
                     print(f"You have already tried: {letter_input}")
@@ -169,13 +169,13 @@ def restart():
     Resets the game and returns user to either difficulty menu or title
     """
     play = input("Play Again? yes/no:\n")
-    if play == "yes":
-        difficulty_selection()
-    elif play == "no":
-        title_text()
-    else:
-        print("Please enter yes or no")
-        play
+    while play != "yes" or "no":
+        print(f"{play} Is invalid. Please enter yes or no")
+        play = input("Play Again? yes/no:\n")
+        if play == "yes":
+            difficulty_selection()
+        elif play == "no":
+            title_text()
 
 
 def clear_lists():
