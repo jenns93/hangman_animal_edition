@@ -1,8 +1,6 @@
 import random
-import sys
 from termcolor import cprint
 from pyfiglet import figlet_format
-from colorama import init
 
 
 word_dic = {
@@ -70,20 +68,28 @@ hangman = [
     "______\n |    |\n O    |\n/|\   |\n/     |\n______|\n",
     " _______\n |     |\n O     |\n/|\    |\n/ \    |\n_______|\n",
 ]
-guess_data_lists = {"wrong": [], "correct": [], "word_to_guess": [], "guess_results": [], }
+guess_data_lists = {
+    "wrong": [],
+    "correct": [],
+    "word_to_guess": [],
+    "guess_results": [],
+}
 
 
 def title_text():
     """
     Prints game title and prompts player to start playing
     """
-    cprint(figlet_format("Let's Play Hangman!\nAnimal edition", font="standard"), "white")
+    cprint(
+        figlet_format("Let's Play Hangman!\nAnimal edition", font="standard"),
+        "white"
+    )
     play_game = input("Type 'play' to start!\n")
     while play_game != "play":
         print("Please enter a valid option")
         play_game = input("Type 'play' to start!\n")
     else:
-        print("Let's go!")
+        cprint(figlet_format("Let's go!", font="standard"), "white")
         difficulty_selection()
 
 
@@ -130,19 +136,31 @@ def input_checker(word_to_guess):
                 print(guess_data_lists["guess_results"])
                 guess_data_lists["guess_results"].clear()
                 if length_of_set == len(guess_data_lists["correct"]):
-                    print(f"!! WINNER !!\n the word was {word_to_guess}")
+                    cprint(
+                        figlet_format(
+                            f"!! WINNER !!\n the word was {word_to_guess}",
+                            font="standard",
+                        ),
+                        "white",
+                    )
                     restart()
             else:
                 print(f"unlucky the word does not contain {letter_input}\n")
                 if letter_input not in guess_data_lists["wrong"]:
                     guess_data_lists["wrong"].append(letter_input)
-                    i += 1
+                    i = 1
                     print(hangman[i])
                 elif letter_input in guess_data_lists["wrong"]:
                     print(f"You have already tried: {letter_input}")
                 print(f"wrong answers {i}")
             if i >= 9:
-                print(f"!! GAME OVER !!\nthe word was\n{word_to_guess}")
+                cprint(
+                    figlet_format(
+                        f"!! GAME OVER !!\nthe word was\n{word_to_guess}",
+                        font="standard",
+                    ),
+                    "white",
+                )
                 restart()
 
 
