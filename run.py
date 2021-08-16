@@ -124,6 +124,7 @@ def input_checker(word_to_guess):
                 guess_data_lists["guess_results"].clear()
                 if length_of_set == len(guess_data_lists["correct"]):
                     print(f"!! WINNER !!\n the word was {word_to_guess}")
+                    restart()
             else:
                 print(f"unlucky the word does not contain {letter_input}\n")
                 if letter_input not in guess_data_lists["wrong"]:
@@ -135,6 +136,18 @@ def input_checker(word_to_guess):
                 print(f"wrong answers {i}")
             if i >= 9:
                 print(f"!! GAME OVER !!\nthe word was\n{word_to_guess}")
+                restart()
+
+
+def restart():
+    play = input("Play Again? yes/no:\n")
+    if play == "yes":
+        difficulty_selection()
+    elif play == "no":
+        title_text()
+    else:
+        print("Please enter yes or no")
+        play
 
 
 def main():
@@ -142,6 +155,6 @@ def main():
     Run program functions
     """
     title_text()
-    
+
 
 main()
