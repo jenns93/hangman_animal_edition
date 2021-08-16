@@ -82,7 +82,7 @@ def title_text():
     """
     cprint(
         figlet_format("Let's Play Hangman!\nAnimal edition", font="standard"),
-        "blue"
+        "yellow"
     )
     play_game = input("Type 'play' to start!\n")
     while play_game != "play":
@@ -103,7 +103,7 @@ def difficulty_selection():
         select_difficulty = input("Choose a difficulty easy/med/hard:\n")
     else:
         cprint(
-            figlet_format(f"{select_difficulty}", font="standard"), "blue"
+            figlet_format(f"{select_difficulty}", font="standard"), "yellow"
         )
         clear_lists()
         word_to_guess = guess_data_lists["word_to_guess"]
