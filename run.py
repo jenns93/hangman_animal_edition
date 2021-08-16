@@ -91,6 +91,7 @@ def difficulty_selection():
         select_difficulty = input("Choose a difficulty easy/med/hard:\n")
     else:
         print(f"You selected: {select_difficulty}")
+        clear_lists()
         word_to_guess = guess_data_lists["word_to_guess"]
         word_to_guess = random.choice(word_dic[select_difficulty])
         input_checker(word_to_guess)
@@ -140,6 +141,9 @@ def input_checker(word_to_guess):
 
 
 def restart():
+    """
+    Resets the game and returns user to either difficulty menu or title
+    """
     play = input("Play Again? yes/no:\n")
     if play == "yes":
         difficulty_selection()
@@ -148,6 +152,15 @@ def restart():
     else:
         print("Please enter yes or no")
         play
+
+
+def clear_lists():
+    """
+    Clears correct/incorrect/guess_results list values for a new game
+    """
+    guess_data_lists["correct"].clear()
+    guess_data_lists["wrong"].clear()
+    guess_data_lists["guess_results"].clear()
 
 
 def main():
