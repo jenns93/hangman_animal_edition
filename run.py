@@ -82,14 +82,14 @@ def title_text():
     """
     cprint(
         figlet_format("Let's Play Hangman!\nAnimal edition", font="standard"),
-        "white"
+        "blue"
     )
     play_game = input("Type 'play' to start!\n")
     while play_game != "play":
         print("Please enter a valid option")
         play_game = input("Type 'play' to start!\n")
     else:
-        cprint(figlet_format("Let's go!", font="standard"), "white")
+        cprint(figlet_format("Let's go!", font="standard"), "yellow")
         difficulty_selection()
 
 
@@ -102,7 +102,9 @@ def difficulty_selection():
         print("Please enter a valid option")
         select_difficulty = input("Choose a difficulty easy/med/hard:\n")
     else:
-        print(f"You selected: {select_difficulty}")
+        cprint(
+            figlet_format(f"{select_difficulty}", font="standard"), "blue"
+        )
         clear_lists()
         word_to_guess = guess_data_lists["word_to_guess"]
         word_to_guess = random.choice(word_dic[select_difficulty])
@@ -141,7 +143,7 @@ def input_checker(word_to_guess):
                             f"!! WINNER !!\n the word was {word_to_guess}",
                             font="standard",
                         ),
-                        "white",
+                        "green",
                     )
                     restart()
             else:
@@ -159,7 +161,7 @@ def input_checker(word_to_guess):
                         f"!! GAME OVER !!\nthe word was\n{word_to_guess}",
                         font="standard",
                     ),
-                    "white",
+                    "red",
                 )
                 restart()
 
