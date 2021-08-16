@@ -78,6 +78,19 @@ def title_text():
         play_game = input("Type 'play' to start!\n")
     else:
         print("Let's go!")
+        difficulty_selection()
+
+
+def difficulty_selection():
+    """
+    Select diffuclty from easy/med/hard
+    """
+    select_difficulty = input("Choose a difficulty easy/med/hard:\n")
+    while select_difficulty not in word_dic:
+        print("Please enter a valid option")
+        select_difficulty = input("Choose a difficulty easy/med/hard:\n")
+    else:
+        print(f"You selected: {select_difficulty}")
 
 
 title_text()
