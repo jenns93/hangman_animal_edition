@@ -169,13 +169,13 @@ def restart():
     Resets the game and returns user to either difficulty menu or title
     """
     play = input("Play Again? yes/no:\n")
-    while play != "yes" or "no":
+    if play == "yes" and len(play) == 3:
+        difficulty_selection()
+    elif play == "no" and len(play) == 2:
+        title_text()
+    else:
         print(f"{play} Is invalid. Please enter yes or no")
-        play = input("Play Again? yes/no:\n")
-        if play == "yes":
-            difficulty_selection()
-        elif play == "no":
-            title_text()
+        restart()
 
 
 def clear_lists():
