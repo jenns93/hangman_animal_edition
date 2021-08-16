@@ -65,3 +65,19 @@ hangman = [
     " _______\n |     |\n O     |\n/|\    |\n/ \    |\n_______|\n",
 ]
 guess_data_lists = {"wrong": [], "correct": [], "word_to_guess": [], "guess_results": [], }
+
+
+def title_text():
+    """
+    Prints game title and prompts player to start playing
+    """
+    print("Let's Play Hangman!\nAnimal edition")
+    play_game = input("Type 'play' to start!\n")
+    while play_game != "play":
+        print("Please enter a valid option")
+        play_game = input("Type 'play' to start!\n")
+    else:
+        print("Let's go!")
+
+
+title_text()
