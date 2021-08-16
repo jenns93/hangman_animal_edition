@@ -1,45 +1,146 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman Animal edition
+- ![Multi devive mockup]
+- [Live Website]
+- [Github Repository]
+ # About
 
-Welcome jenns93,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## Table of Contents
 
-## Gitpod Reminders
+- [User Experience UX](#User-Experience-UX)
+- [Design](#Design)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [Features](#Features)
+- [Specific to Pages](#Specific-to-Pages)
 
-`python3 -m http.server`
+- [Technologies Used](#Technologies-Used)
 
-A blue button should appear to click: *Make Public*,
+- [Testing](#Testing)
 
-Another blue button should appear to click: *Open Browser*.
+- [Deployment](#Deployment)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- [Bugs](#Bugs)
 
-A blue button should appear to click: *Make Public*,
+- [Credits](#Credits)
 
-Another blue button should appear to click: *Open Browser*.
+## User Experience UX
+### User Stories
+i.
+1. 
+2. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Design
+### Colour scheme
+- 
+### Typography
+- 
 
-## Updates Since The Instructional Video
+## Features
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Specific to Pages
+### Game
+- 
+### Future Features
+-   
+## Technologies Used
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Languages Used
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Frameworks, libraries and programs used
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+-[Heroku](https://dashboard.heroku.com/apps) Heroku was used to host the files and to publish the finished program.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+-[Gitpod](https://www.gitpod.io/) Gitpod was used to code the website and commit changes throughout the development to Github.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Testing
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Functionality Testing
+#### Navigation
 
---------
+- 
+#### Options
+- 
+#### Game
+- 
+### PEP8 - 
 
-Happy coding!
+### Usability Testing
+
+-
+
+### Compatibility Testing
+
+#### Browser Compatibility
+| Device      | Safari            |  Microsoft Edge    | Chrome             | Internet Explorer  | FireFox            |
+| ----------- | -----------       | -----------        | -----------        | -----------        | -----------        |
+| Desktop     | Not Tested        |Not Tested          |:heavy_check_mark:  |Not Tested          |Not Tested          |
+| Tablet      | Not Tested        |Not Tested          |Not Tested          |Not Tested          |Not Tested          |
+| Mobile      | Not Tested        |Not Tested          |Not Tested          |Not Tested          |Not Tested          |
+
+### Performance Testing
+
+-
+
+### Testing User Stories
+
+i.
+1.
+
+## Deployment
+### Heroku
+- 
+
+1. 
+
+### Forking the GitHub Repository
+To contribute you can Fork without affecting the main branch. Follow the instructions outlined below.
+
+1. Go to GitHub and log in.
+2. Find the Repository that was used for this project.
+3. To the right of the Repository name you will see the 'Fork' button. This is located next to the 'Start' and 'Watch' buttons.
+4. Doing this will place a copy in your own repository.
+5. When you are finished locating the 'New Pull Request' button above the file list on the original repository.
+
+### Cloning
+- To clone or download the repository to your own device follow the instructions listed below.
+
+1. Head to Github and log in.
+2. Find the Repository for this site.
+3. Below the name of the repository find the 'Clone or Download' green button.
+4. To clone the repo using HTTPS click the link below "Clone with HTTPS".
+5. Open your Terminal and go to the directory you want the cloned directory to be copied to.
+6. Enter "Git Clone" and paste the URL copied from GitHub.
+7. Create your local clone by pressing "Enter".
+
+## Bugs
+-
+
+## Credits
+
+#### Code
+
+- Code institute walkthrough “love Sandwiches” for Python structure layout 
+- Code institute Python essentials. 
+- Stackoverflow for tips, examples concepts for further understanding of language definitions.
+- w3schools for tips, examples concepts for further understanding of language definitions.
+- GeeksforGeeks for examples for understanding language better.
+
+#### Content
+
+- All code written by the author - Jack Jenns
+
+- To create the README file inspiration was taken from:
+
+- Code Institute [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME)
+- Code Institute [README Template](https://github.com/Code-Institute-Solutions/readme-template)
+- [Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Acknowledgements
+- Stackoverflow.
+- Fellow students on slack.
+- My mentor for his guidance.
+- w3schools. 
+- GeeksforGeeks
+
