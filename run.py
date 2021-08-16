@@ -1,4 +1,10 @@
 import random
+import sys
+from termcolor import cprint
+from pyfiglet import figlet_format
+from colorama import init
+
+
 word_dic = {
     "easy": [
         "cat",
@@ -71,7 +77,7 @@ def title_text():
     """
     Prints game title and prompts player to start playing
     """
-    print("Let's Play Hangman!\nAnimal edition")
+    cprint(figlet_format("Let's Play Hangman!\nAnimal edition", font="standard"), "white")
     play_game = input("Type 'play' to start!\n")
     while play_game != "play":
         print("Please enter a valid option")
