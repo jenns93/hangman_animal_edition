@@ -115,6 +115,13 @@ def input_checker(word_to_guess):
                 print(f"correct {letter_input} is in the word \n")
                 if letter_input not in guess_data_lists["correct"]:
                     guess_data_lists["correct"].append(letter_input)
+                for char in word_to_guess:
+                    if char in guess_data_lists["correct"]:
+                        guess_data_lists["guess_results"].append(char)
+                    else:
+                        guess_data_lists["guess_results"].append("_")
+                print(guess_data_lists["guess_results"])
+                guess_data_lists["guess_results"].clear()
                 if length_of_set == len(guess_data_lists["correct"]):
                     print(f"!! WINNER !!\n the word was {word_to_guess}")
             else:
