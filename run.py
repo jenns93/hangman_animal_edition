@@ -80,16 +80,17 @@ def title_text():
     """
     Prints game title and prompts player to start playing
     """
-    cprint(
-        figlet_format("Let's Play Hangman!\nAnimal edition", font="standard"),
-        "yellow"
+    cprint_font(
+        "Let's Play Hangman!\nAnimal edition",
     )
     play_game = input("Type 'play' to start!\n")
     while play_game != "play":
         print("Please enter a valid option")
         play_game = input("Type 'play' to start!\n")
     else:
-        cprint(figlet_format("Let's go!", font="standard"), "yellow")
+        cprint_font(
+            "Let's go!",
+        )
         difficulty_selection()
 
 
@@ -102,8 +103,8 @@ def difficulty_selection():
         print("Please enter a valid option")
         select_difficulty = input("Choose a difficulty easy/med/hard:\n")
     else:
-        cprint(
-            figlet_format(f"{select_difficulty}", font="standard"), "yellow"
+        cprint_font(
+            f"{select_difficulty}",
         )
         clear_lists()
         word_to_guess = guess_data_lists["word_to_guess"]
@@ -138,11 +139,8 @@ def input_checker(word_to_guess):
                 print(guess_data_lists["guess_results"])
                 guess_data_lists["guess_results"].clear()
                 if length_of_set == len(guess_data_lists["correct"]):
-                    cprint(
-                        figlet_format(
-                            f"!! WINNER !!\n the word was {word_to_guess}",
-                            font="standard",
-                        ),
+                    cprint_font(
+                        f"!! WINNER !!\n the word was {word_to_guess}",
                         "green",
                     )
                     restart()
@@ -155,15 +153,21 @@ def input_checker(word_to_guess):
                 elif letter_input in guess_data_lists["wrong"]:
                     print(f"You have already tried: {letter_input}")
                 print(f"wrong answers {i}")
-            if i >= 9:
-                cprint(
-                    figlet_format(
-                        f"!! GAME OVER !!\nthe word was\n{word_to_guess}",
-                        font="standard",
-                    ),
+            if i >= 3:
+                cprint_font(
+                    f"!! GAME OVER !!\nthe word was\n{word_to_guess}",
                     "red",
                 )
                 restart()
+
+
+def cprint_font(text, color="yellow"):
+    return cprint(
+        figlet_format(
+            text, font="standard",
+        ),
+        color,
+    )
 
 
 def restart():
@@ -171,9 +175,9 @@ def restart():
     Resets the game and returns user to either difficulty menu or title
     """
     play = input("Play Again? yes/no:\n")
-    if play == "yes" and len(play) == 3:
+    if play == "yes":
         difficulty_selection()
-    elif play == "no" and len(play) == 2:
+    elif play == "no":
         title_text()
     else:
         print(f"{play} Is invalid. Please enter yes or no")
