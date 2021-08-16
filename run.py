@@ -122,6 +122,7 @@ def input_checker(word_to_guess):
                 if letter_input not in guess_data_lists["wrong"]:
                     guess_data_lists["wrong"].append(letter_input)
                     i += 1
+                    print(hangman[i])
                 elif letter_input in guess_data_lists["wrong"]:
                     print(f"You have already tried: {letter_input}")
                 print(f"wrong answers {i}")
