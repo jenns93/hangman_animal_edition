@@ -64,3 +64,4 @@ hangman = [
     "______\n |    |\n O    |\n/|\   |\n/     |\n______|\n",
     " _______\n |     |\n O     |\n/|\    |\n/ \    |\n_______|\n",
 ]
+guess_data_lists = {"wrong": [], "correct": [], "word_to_guess": [], "guess_results": [], }
