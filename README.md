@@ -1,5 +1,5 @@
 # Hangman Animal edition
-- ![Multi devive mockup]
+- ![Multi devive mockup](assets/images/all-devices-mockup.png)
 - [Live Website](https://hangman-animal-edition.herokuapp.com/)
 - [Github Repository](https://github.com/jenns93/hangman_animal_edition)
  # About
@@ -34,15 +34,19 @@ Players will then have nine attempts to guess the animal before the hangman pict
 - 
 
 ## Features
+![Title-screen](assets/images/hangman-title-screenshot.png)
 - Users are welcomed to the game with the title screen displaying the game title and promting the to initiate the game.
 - Players will then need to select between three difficulties, easy, medium and hard. As difficulty increases animal words that are more obsqure and or longer words are selected from the word dictionary.
 - Players are then asked to provide their letter guess.
 - When guess is submitted the program will give feedback on whether the input was valvid then whether or not the letter guessed was in the word.
 - If players guess was correct the word is displayed with the correct letter visable and the letters still not guessed hidden with an underscore.
+![](assets/images/hangman-game-screenshot.png)
 - If input is not in the word the hangman picture is displayed along with a wrong answer counter.
 - The hangman picture is iterated through as users get wrong answers until the last stage of the picture is displayed.
 - Game over is displayed when the player reaches nine wrong answers without completing the word, the word they were attempting to guess is also displayed.
+![Title-screen](assets/images/hangman-gameover-screenshot.png)
 - If the player guesses all of the letters in the word then WINNER is displayed.
+![](assets/images/hangman-winner-screenshot.png)
 - Win or Lose when the game is complete the player is asked wether they want to play again, yes or no.
 - If yes is selected the player is brought back to the difficulty menu.
 - If no is selected the player is returned to the title screen.   
@@ -76,19 +80,6 @@ Players will then have nine attempts to guess the animal before the hangman pict
 ### PEP8 - 
 
 ### Usability Testing
-
--
-
-### Compatibility Testing
-
-#### Browser Compatibility
-| Device      | Safari            |  Microsoft Edge    | Chrome             | Internet Explorer  | FireFox            |
-| ----------- | -----------       | -----------        | -----------        | -----------        | -----------        |
-| Desktop     | Not Tested        |Not Tested          |:heavy_check_mark:  |Not Tested          |Not Tested          |
-| Tablet      | Not Tested        |Not Tested          |Not Tested          |Not Tested          |Not Tested          |
-| Mobile      | Not Tested        |Not Tested          |Not Tested          |Not Tested          |Not Tested          |
-
-### Performance Testing
 
 -
 
