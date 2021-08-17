@@ -168,7 +168,7 @@ def cprint_font(text, color="yellow"):
     return cprint(
         figlet_format(
             text,
-            font="standard",
+            font="basic",
         ),
         color,
     )
