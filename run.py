@@ -131,13 +131,11 @@ def input_checker(word_to_guess):
                 print(f"correct {letter_input} is in the word \n")
                 if letter_input not in guess_data_lists["correct"]:
                     guess_data_lists["correct"].append(letter_input)
-                for char in word_to_guess:
-                    if char in guess_data_lists["correct"]:
-                        guess_data_lists["guess_results"].append(char)
-                    else:
-                        guess_data_lists["guess_results"].append("_")
-                print(guess_data_lists["guess_results"])
-                guess_data_lists["guess_results"].clear()
+                print_results(
+                    word_to_guess,
+                    guess_data_lists["correct"],
+                    guess_data_lists["guess_results"],
+                )
                 if length_of_set == len(guess_data_lists["correct"]):
                     cprint_font(
                         f"!! WINNER !!\n the word was {word_to_guess}",
@@ -153,7 +151,12 @@ def input_checker(word_to_guess):
                 elif letter_input in guess_data_lists["wrong"]:
                     print(f"You have already tried: {letter_input}")
                 print(f"wrong answers {i}")
-            if i >= 3:
+                print_results(
+                    word_to_guess,
+                    guess_data_lists["correct"],
+                    guess_data_lists["guess_results"],
+                )
+            if i >= 9:
                 cprint_font(
                     f"!! GAME OVER !!\nthe word was\n{word_to_guess}",
                     "red",
@@ -164,7 +167,8 @@ def input_checker(word_to_guess):
 def cprint_font(text, color="yellow"):
     return cprint(
         figlet_format(
-            text, font="standard",
+            text,
+            font="standard",
         ),
         color,
     )
@@ -191,6 +195,16 @@ def clear_lists():
     guess_data_lists["correct"].clear()
     guess_data_lists["wrong"].clear()
     guess_data_lists["guess_results"].clear()
+
+
+def print_results(word, correct, results):
+    for char in word:
+        if char in correct:
+            results.append(char)
+        else:
+            results.append("_")
+    print(results)
+    results.clear()
 
 
 def main():
