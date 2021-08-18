@@ -117,10 +117,6 @@ Game inputs for letter guesses have also been tested such as:
 ### Validator Testing 
 - PEP8. No errors were returned from PEP8online.com
 
-### Usability Testing
-
--
-
 ### Testing User Stories
 
 i. As a user, I am looking to play a classic version of Hangman.
