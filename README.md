@@ -1,5 +1,5 @@
 # Hangman Animal edition
-- ![](/assets/images/all-devices-mockup.png)"Multi devive mockup"
+- ![](/assests/images/all-devices-mockup.png)"Multi devive mockup"
 - [Live Website](https://hangman-animal-edition.herokuapp.com/)
 - [Github Repository](https://github.com/jenns93/hangman_animal_edition)
  # About
@@ -26,40 +26,36 @@ Players need to guess the correct word before the hangman picture is complete.
 
 ## How To Play
 Players can select between three difficulties, easy, medium and hard.
-Players will then have nine attempts to guess the animal before the hangman picture is complete.
-## Design
-### Colour scheme
-- 
-### Typography
-- 
+Players will then have nine attempts to guess a letter in the the animal word before the hangman picture is complete and the game is over.
 
 ## Features
-![Title-screen](/assets/images/hangman-title-screenshot.png)
+![Title-screen](/assests/images/hangman-title-screenshot.png)
 - Users are welcomed to the game with the title screen displaying the game title and promting the to initiate the game.
 - Players will then need to select between three difficulties, easy, medium and hard. As difficulty increases animal words that are more obsqure and or longer words are selected from the word dictionary.
 - Players are then asked to provide their letter guess.
 - When guess is submitted the program will give feedback on whether the input was valvid then whether or not the letter guessed was in the word.
 - If players guess was correct the word is displayed with the correct letter visable and the letters still not guessed hidden with an underscore.
-![](/assets/images/hangman-game-screenshot.png)
+
+![](/assests/images/hangman-game-screenshot.png)
 - If input is not in the word the hangman picture is displayed along with a wrong answer counter.
 - The hangman picture is iterated through as users get wrong answers until the last stage of the picture is displayed.
 - Game over is displayed when the player reaches nine wrong answers without completing the word, the word they were attempting to guess is also displayed.
-![Title-screen](assets/images/hangman-gameover-screenshot.png)
+![Title-screen](assests/images/hangman-gameover-screenshot.png)
 - If the player guesses all of the letters in the word then WINNER is displayed.
-![](/assets/images/hangman-winner-screenshot.png)
+![](/assests/images/hangman-winner-screenshot.png)
 - Win or Lose when the game is complete the player is asked wether they want to play again, yes or no.
 - If yes is selected the player is brought back to the difficulty menu.
-- If no is selected the player is returned to the title screen.   
-## Specific to Pages
-### Game
-- 
+- If no is selected the player is returned to the title screen.  
+
 ### Future Features
--   
+- An exspantion of the word dictionary.
+- Additional difficulty levels.
+- Addition text graphics.
 ## Technologies Used
 
 ### Languages Used
 
-- 
+- Python
 
 ### Frameworks, libraries and programs used
 
@@ -70,14 +66,20 @@ Players will then have nine attempts to guess the animal before the hangman pict
 ## Testing
 
 ### Functionality Testing
-#### Navigation
-
-- 
-#### Options
-- 
-#### Game
-- 
-### PEP8 - 
+Invalid inputs have been entered into all options and navigational inputs throughout the game such as:
+- Strings too long.
+- Strings too short.
+- Intergers.
+- Valid word plus space.
+Game inputs for letter guesses have also been tested such as:
+- intergers.
+- Strings too long.
+- Strings too short.
+- Valid word plus space.
+- Already guessed letters.
+- All input testing return correct and exspected responses.
+### Validator Testing 
+- PEP8, No errors were returned from PEP8online.com
 
 ### Usability Testing
 
@@ -90,9 +92,13 @@ i.
 
 ## Deployment
 ### Heroku
-- 
-
-1. 
+The program has been deployed using Code Institute mock terminal for Heroku.
+#### Steps for deployment:
+- Fork or clone the repository.
+- Create a new Heroku app.
+- Set the buildbacks to Python and Nodejs in this order.
+- Link the Heroku app to the repository.
+- Click Deploy. 
 
 ### Forking the GitHub Repository
 To contribute you can Fork without affecting the main branch. Follow the instructions outlined below.
@@ -118,6 +124,8 @@ To contribute you can Fork without affecting the main branch. Follow the instruc
 ### Solved Bugs
 1. Each time correct letter was submmited to correct list it would print for example "_","i","_","p","i","_","p","i","g".
 i. This was resolved by clearing the list at the end for the for loop which was latter made into a function to reduce length of program code.
+### Remaining Bugs
+- No known bugs remaining at time of writing.
 
 ## Credits
 
@@ -143,6 +151,6 @@ i. This was resolved by clearing the list at the end for the for loop which was 
 - Stackoverflow.
 - Fellow students on slack.
 - My mentor for his guidance.
-- w3schools. 
+- W3schools. 
 - GeeksforGeeks
 
