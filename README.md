@@ -1,5 +1,5 @@
 # Hangman Animal edition
-![](/assests/images/all-devices-mockup.png)
+![](/assets/images/all-devices-mockup.png)
 - [Live Website](https://hangman-animal-edition.herokuapp.com/)
 - [Github Repository](https://github.com/jenns93/hangman_animal_edition)
  # About
@@ -15,6 +15,8 @@ Players need to guess the correct word before the hangman picture is complete.
 - [Features](#Features)
 
 - [Technologies Used](#Technologies-Used)
+
+- [Data Model](#Data-Model)
 
 - [Testing](#Testing)
 
@@ -37,7 +39,7 @@ i. As a user, I am looking to play a classic version of Hangman.
 4. I want to be able to see what stage of the Hangman I ‘am at.
 
 ii. As a user who has never played this game before.
-1. I don't want it to be too difficult.
+1. I do not want it to be too difficult.
 2. I want the game to tell me what the word was if I lose.
 3. I want to be able to see what correct letters I have guessed.
 4. I want to be informed if I have already guessed a letter before.
@@ -49,21 +51,21 @@ iii. As a user who is well versed in the game.
 3. I want the game to have a retro/arcade feel.
 
 ## Features
-![Title-screen](/assests/images/hangman-title-screenshot.png)
-- Users are welcomed to the game with the title screen displaying the game title and prompting the to initiate the game.
+![Title-screen](/assets/images/hangman-title-screenshot.png)
+- Users are welcomed to the game with the title screen displaying the game title and prompting them to initiate the game.
 - Players will then need to select between three difficulties, easy, medium, and hard. As difficulty increases animal words that are more obscure and or longer words are selected from the word dictionary.
 - Players are then asked to provide their letter guess.
 - When guess is submitted the program will give feedback on whether the input was valid then whether the letter guessed was in the word.
 - If players guess was correct the word is displayed with the correct letter visible, and the letters still not guessed hidden with an underscore.
 
-![](/assests/images/hangman-game-screenshot.png)
+![Game](/assets/images/hangman-game-screenshot.png)
 - If input is not in the word the hangman picture is displayed along with a wrong answer counter.
 - The hangman picture is iterated through as users get wrong answers until the last stage of the picture is displayed.
 - Game over is displayed when the player reaches nine wrong answers without completing the word, the word they were attempting to guess is also displayed.
-![Title-screen](assests/images/hangman-gameover-screenshot.png)
-- If the player guesses all of the letters in the word, then WINNER is displayed.
-![](/assests/images/hangman-winner-screenshot.png)
-- Win or Lose when the game is complete the player is asked whether they want to play again, yes or no.
+![Game Over](assets/images/hangman-gameover-screenshot.png)
+- If the player guesses all the letters in the word, then WINNER is displayed.
+![Winner](/assets/images/hangman-winner-screenshot.png)
+- Win or lose when the game is complete the player is asked whether they want to play again, yes or no.
 - If yes is selected the player is brought back to the difficulty menu.
 - If no is selected the player is returned to the title screen.  
 
@@ -83,6 +85,20 @@ iii. As a user who is well versed in the game.
 
 -[Gitpod](https://www.gitpod.io/) Gitpod was used to code the website and commit changes throughout the development to Github.
 
+## Data Model
+![Flowchart](/assets/images/flowchart.png)
+- The program begins from the main() function which triggers the title_text() function in which the player must type "play" to enter the next phase.
+- The difficulty_selection() function is then initiated where the player is required to select a difficulty option from easy/med/hard.
+- Once a difficulty is selected the clear_lists() function is run to ensure the dictionary lists are empty ready for the new game.
+- Then the input_checker() is run which is the main body of the game, this will check if the users guess input is valid and whether it is in either the wrong or correct lists in the dictionary.
+- If the users guess hasn't been guessed before then the lists will be appended, and the user will be informed if whether their guess was right or wrong.
+- The print_result() function will then commence which will run a for loop to append the letters in the word_to_guess that are in the correct list. Then remaining letters that are not in the list will be replaced with and underscore in a results list and printed to the terminal then cleared.
+- When a new wrong letter is submitted the same series of events begins with the addition of the printing of the Hangman picture, the i is increased by one so that the next time the Hangman image is iterated in the list where it is stored.
+- If the length of the unique letters in the correct list is equal to the ones in the word the user is guessing "Winner" is displayed and the game runs the restart() function.
+- If the wrong answers count reaches nine "Game Over" is displayed and the game runs the restart() function.
+- The restart() function will ask the user if they would like to play again, if the player selects “yes” the will be taken back to the difficulty selection and the process begins again.
+- If the user selects “no” then they will be returned to the title screen where again the series of events start over.
+- The cprint_font() is used to print text art to the terminal to enhance the user experience.
 ## Testing
 
 ### Functionality Testing
